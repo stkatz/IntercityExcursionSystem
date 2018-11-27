@@ -1,12 +1,10 @@
 #Front End Prototype for Queen's Intercity Excursion Program
 #Allows a planner or agent to login to complete transactions based on user input
 
-
 service_list = []
 currentService = []
 transactionFile = []
 cancels = 0
-
 
 
 # Checks if service name raw_input by user meets requirements
@@ -31,6 +29,7 @@ def check_service_num():
             break
     return service_num
 
+
 # Creates transaction message for services completed
 # Appended to a list to later be written into the output file
 def make_line(serv, num1, tick, num2, name, date):
@@ -38,6 +37,7 @@ def make_line(serv, num1, tick, num2, name, date):
     line = serv + " " + num1 + " " + tick + " " + num2 + " " + name + " " + date
     transactionFile.append(line)
 
+    
 def write_transaction_summary():
     global transactionFile
     #Writes transaction messages to file
@@ -67,6 +67,7 @@ def logout():
         else:
             "Invalid command, please 'login': "
 
+            
 # Completes deleteservice transaction, validates raw_inputs
 def delete_service():
     invalid = True
@@ -83,7 +84,6 @@ def delete_service():
         else:
             continue
     make_line("DEL", service_num, "0", "00000", service_name, "0")
-
 
 
 # Completes createservice transaction, validates raw_inputs from user
@@ -139,6 +139,7 @@ def create_service():
             continue
     make_line("CRE", service_num, "0", "00000", service_name, date)
 
+    
 # Completes changeticket transaction, validates raw_inputs
 # Different requirements based on uer
 def changeticket(user):
