@@ -13,4 +13,4 @@ Back End Testing:
 Used white box unit testing methods for the Back office. These methods were decision coverage testing and basic block coverage testing.
 
 Front End and Back End Integration:
-Developed a Bash Shell Script to integraete the Front Office and Back Office. This automated the merging of Transaction Summary Files and Valid Services File daily. Following this another Bash Shell Script was developed to run Weekly to automatically execute 5 daily scripts to simulate a week. 
+Developed a Bash Shell Script to integrate the Front Office and Back Office. This automated the merging of Transaction Summary Files and Valid Services File daily. Following this another Bash Shell Script was developed to run Weekly to automatically execute 5 daily scripts to simulate a week. 
